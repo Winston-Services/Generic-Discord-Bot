@@ -5,25 +5,17 @@
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
-    "build::linux": "pkg -t node16-linux --out-path ./dist -o generic-discord-bot -C GZip index.js",
-    "build::win": "pkg -t node16-win --out-path ./dist -o generic-discord-bot.exe -C GZip index.js",
-    "build::mac": "pkg -t node16-macos --out-path ./dist -o generic-discord-bot -C GZip index.js",
     "test": "jest --watchAll"
   },
   "keywords": [
-    "Games;",
+    "Games",
     "Discord",
-    "Bot;"
+    "Bot"
   ],
   "author": "M.A.D. Computer Consulting LLC",
   "license": "MIT",
   "dependencies": {
     "discord.js": "^14.7.1",
-    "dotenv": "^16.0.3",
-    "pkg": "^5.8.0"
-  },
-  "bin": "index.js",
-  "pkg": {
-    "outputPath": "dist"
+    "dotenv": "^16.0.3"
   }
 }
