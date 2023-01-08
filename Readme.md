@@ -185,36 +185,6 @@ The DISCORD_CLIENT_PERMISSIONS should be the Bitwise number of the permissions y
 
 **Advanced features and functionality**
 
-**Compile the Bot**
----
-
-You will need to have already downloaded this repository. These instruction assume you are already familar with NodeJS and how to use NPM.
-
-Run the compile command.
-```
-npm build
-```
-
-or for a specific Operating System (OS) 
-
-```
-npm run build:MAC
-```
-
-```
-npm run build:WIN
-```
-
-```
-npm run build:LINUX
-```
-
-```
-npm run build:ARM
-```
-
-The compiled versions will be placed in the `./dist` folder. Copy the executable from this folder to its own folder where you will add your settings and configurations file's as described in the #Set Up section of this documentation.
-
 **Appendex A*
 ---
 This is a list of the event files that come with the basic programs.
