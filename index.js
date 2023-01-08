@@ -12,7 +12,8 @@ const {
   Client,
   SlashCommandBuilder,
   Collection,
-  Routes
+  Routes,
+  EmbedBuilder
 } = require("discord.js");
 
 const options = {
@@ -311,7 +312,29 @@ class GenericDiscordBod {
       console.warn("File not found.", currentPath, file);
     }
   };
-
+  buildEmbed({
+    author,
+    color,
+    title,
+    description,
+    fields,
+    image,
+    thumbnail,
+    url,
+    footer
+  }) {
+    const embed = new EmbedBuilder();
+    if (author) embed.setAuthor(author);
+    if (color) embed.setColor(color);
+    if (title) embed.setTitle(title);
+    if (description) embed.setDescription(description);
+    if (fields) embed.setFields(fields);
+    if (image) embed.setImage(image);
+    if (thumbnail) embed.setThumbnail(thumbnail);
+    if (url) embed.setURL(url);
+    if (footer) embed.setFooter(footer);
+    return embed;
+  }
   setUsername(username) {
     this._client.user.setUsername(username);
   }
