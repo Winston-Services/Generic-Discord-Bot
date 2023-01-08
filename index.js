@@ -321,13 +321,13 @@ class GenericDiscordBod {
   };
 }
 async function main() {
-  const RickleFantasyFruitBot = new GenericDiscordBod();
-  await RickleFantasyFruitBot.login();
-  RickleFantasyFruitBot.setUsername("! RickleFruitBowl");
+  const GenericBot = new GenericDiscordBod();
+  await GenericBot.login();
+  GenericBot.setUsername("! GenericBot");
 
   console.log(
     "Invite Your Bot :: ",
-    RickleFantasyFruitBot.authorize(
+    GenericBot.authorize(
       process.env.DISCORD_API_USER,
       process.env.DISCORD_CLIENT_PERMISSIONS
     )
