@@ -28,8 +28,33 @@ The `Readme.md` file is this documentation.
 
 In the `commands` sub-folder you will find two folders `app` and `guild`. These folder separate the logic between Global Slash Commands and Guild Slash Commands.
 
+*Set Up*
+---
+
+1) Step One
+    Fork this Repository.
+
+2) Edit the Environment File.
+    Copy the .env_example file to .env
+
+3) Add Bot Credentials
+    Grab your Credentials from Discord Developer Portal.
+    See (Discord Developer Portal)[]
+    
+4) Install node modules
+    Install the node module dependancies. `npm i`
+
+```bash
+git clone {URL} {FOLDER}
+cd {FOLDER}
+cp .env_example .env
+#edit .env file (Add discord bot credentials here)
+npm i # or use yarn install
+```
+
 ***Slash Command Logic***
 ---
+
 With in the two folders `app` and `guild` you will create the logic that interacts with the user in discord. The `app` folder contains the logic for the global slash commands the bot will recognize, and the `guild` folder contains the slash command logic for specific guilds.
 
 Each command file will uses the following template.
@@ -50,7 +75,7 @@ module.exports = {
 
 Let's break down the parameters here.
 
-_type_
+_type_ (Optional)
 
 The type of command this represents. There are three types to choose from. 
 
@@ -70,13 +95,65 @@ The description of the command. This will be displayed to the user when they att
 
 _optons_
 
+Use an array of option objects to create your command options. The following is a template for the object. Make sure to place any required options first.
 ```JavaScript
 {
-  name: "",
-  description: ""
+  name: String, //Required.
+  description: String,
+  type: String, //Required.
+  required: Boolean //Optional Default's to false.
 },
 ```
+Each option should have a unique name, 
 
+_name_
+
+The custom id or name of this option.
+
+_description_
+
+The description of the command.
+
+_type_
+
+The type of option. The following are currently the 5 options available.
+[StringOption, NumberOption, BooleanOption, RoleOption, ChannelOption]
+
+_required_
+
+Should this item be required. This option will default to false.
+
+Below are some examples of options you can include.
+
+```JavaScript
+// StringOption
+
+```
+
+```JavaScript
+// NumberOption
+
+```
+
+```JavaScript
+// UserOption
+
+```
+
+```JavaScript
+// BooleanOption
+
+```
+
+```JavaScript
+// RoleOption
+
+```
+
+```JavaScript
+// ChannelOption
+
+```
 
 _commands_
 
