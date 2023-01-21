@@ -127,32 +127,62 @@ Below are some examples of options you can include.
 
 ```JavaScript
 // StringOption
-
+    {
+      type: "StringOption",
+      name: "letter",
+      description: "Enter a Letter",
+      required: false
+    }
 ```
 
 ```JavaScript
 // NumberOption
-
+    {
+      type: "NumberOption",
+      name: "number",
+      description: "Enter a Number",
+      required: false
+    },
 ```
 
 ```JavaScript
 // UserOption
-
+    {
+      type: "UserOption",
+      name: "user",
+      description: "Select A User",
+      required: false
+    }
 ```
 
 ```JavaScript
 // BooleanOption
-
+    {
+      type: "BooleanOption",
+      name: "answer",
+      description: "True or False",
+      required: false
+    }
 ```
 
 ```JavaScript
 // RoleOption
-
+    {
+      type: "RoleOption",
+      name: "role",
+      description: "Select a Role",
+      required: false
+    }
 ```
 
 ```JavaScript
 // ChannelOption
-
+    {
+      type: "ChannelOption",
+      name: "channel",
+      description: "Select a Channel",
+      required: false
+    }
 ```
 
 _commands_
