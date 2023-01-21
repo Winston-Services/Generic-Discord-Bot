@@ -346,7 +346,7 @@ class GenericDiscordBod {
 async function main() {
   const GenericBot = new GenericDiscordBod();
   await GenericBot.login();
-  GenericBot.setUsername("! GenericBot");
+  GenericBot.setUsername(process.env.DISCORD_BOT_NAME);
 
   console.log(
     "Invite Your Bot :: ",
